@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { FadeInSection, Section } from './common'
 import QuoteBox from './QuoteBox'
 
-export default function HumanClientQuotes() {
+export function HumanClientQuotes() {
   return (
     <Container>
       <FadeInSection>

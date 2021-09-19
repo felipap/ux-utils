@@ -12,7 +12,7 @@ interface Props {
   straight?: boolean
 }
 
-export default function SectionDivider({
+export function SectionDivider({
   from = 'white',
   to = 'white',
   flip = false,

@@ -1,8 +1,29 @@
 {
-  "extends": "../../config/next.tsconfig.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "strictNullChecks": true,
     "baseUrl": "./",
+    "paths": {
+      "shared/*": ["../packages/shared/*"],
+      "@aww-sites/sub": ["../packages/sub"],
+      "@aww-sites/shared": ["../packages/shared"],
+      "@aww-sites/awwdience-blog": ["../packages/awwdience-blog"],
+      "@aww-sites/human-blog": ["../packages/human-blog"],
+      "@aww-sites/*": ["../packages/*"]
+    }
   },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.jsx"],
   "exclude": ["node_modules"]
 }
