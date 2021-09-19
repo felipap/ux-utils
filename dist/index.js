@@ -1,3 +1,3 @@
 export default {
-	abc: 123,
+    abc: 123,
 };

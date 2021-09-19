@@ -1,0 +1,31 @@
+/// <reference types="react" />
+export declare const LinkFontFamily = "Poppins, sans-serif";
+export declare const MaxWidth = 1150;
+export declare const ColorPink = "#fdf8f7";
+export declare const ColorBackground = "#fff";
+export declare const ColorForeground = "#fafafa";
+export declare const ColorBorder = "rgba(0,0,0,1)";
+export declare const BorderWidth = 2;
+export declare const Section: any;
+export declare const ParagraphStyle: any;
+export declare const PageHeader: any;
+export declare const SectionGroup: any;
+export declare const SectionHeader: any;
+export declare const CentralizedContainer: any;
+export declare const RelativeBox: any;
+export declare function FadeInSection(props: any): JSX.Element;
+export declare const BlurBall: any;
+export declare function LogoNotification(props: {
+    name: string;
+    dismissable?: boolean;
+    children: React.ReactNode;
+    link?: string;
+}): JSX.Element | null;
+export declare const LogoNotificationContainer: any;
+export declare function SmallSquiglyDivider(): JSX.Element;
+export declare function SquiglyDivider(): JSX.Element;
+export declare function ArrowSvgRight0(): JSX.Element;
+export declare function ArrowSvgBottom(): JSX.Element;
+export declare const RainbowSpan: any;
+export declare const BenefitNumber: any;
+export declare const ParagraphStyle2: any;
