@@ -1,0 +1,20 @@
+{
+  "name": "@aww-sites/shared",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest --coverage --config ../../jest.config.js ./src/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "antd": "^4.15.1",
+    "framer-motion": "^4.1.4",
+    "polished": "^4.1.1",
+    "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^8.31.0",
+    "react-router": "^5.2.0",
+    "reflexbox": "^4.0.6"
+  }
+}
