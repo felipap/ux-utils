@@ -1,4 +1,2 @@
-declare const _default: {
-    abc: number;
-};
-export default _default;
+import { SectionDivider } from './components/SectionDivider';
+export { SectionDivider, };

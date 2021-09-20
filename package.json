@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-    "prepublish": "tsc",
+		"prepublish": "tsc",
 		"test": "jest --coverage",
 		"storybook": "start-storybook -p 6006",
 		"lint": "eslint --ext .ts,.tsx,.js src",
@@ -15,8 +15,8 @@
 	"keywords": [],
 	"author": "",
 	"private": false,
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"files": [
 		"./dist"
 	],
@@ -83,12 +83,14 @@
 		"framer-motion": "^4.1.4",
 		"plop": "^2.7.4",
 		"polished": "^4.1.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
 		"react-helmet": "^6.1.0",
 		"react-intersection-observer": "^8.31.0",
 		"reflexbox": "^4.0.6",
 		"styled-components": "^5.2.3",
 		"theme-ui": "^0.10.0"
-	}
+	},
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }

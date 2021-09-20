@@ -1,3 +1,5 @@
-export default {
-	abc: 123,
-};
+import { SectionDivider } from './components/SectionDivider'
+
+export {
+  SectionDivider,
+}
