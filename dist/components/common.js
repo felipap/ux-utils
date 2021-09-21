@@ -33,15 +33,28 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ParagraphStyle2 = exports.BenefitNumber = exports.RainbowSpan = exports.ArrowSvgBottom = exports.ArrowSvgRight0 = exports.SquiglyDivider = exports.SmallSquiglyDivider = exports.LogoNotificationContainer = exports.LogoNotification = exports.BlurBall = exports.FadeInSection = exports.RelativeBox = exports.CentralizedContainer = exports.SectionHeader = exports.SectionGroup = exports.PageHeader = exports.ParagraphStyle = exports.Section = exports.BorderWidth = exports.ColorBorder = exports.ColorForeground = exports.ColorBackground = exports.ColorPink = exports.MaxWidth = exports.LinkFontFamily = void 0;
+exports.PaddedContainer = exports.Code = exports.Icons = exports.SectionContainer = exports.Stats = exports.Breadcrumbs = exports.Smaller = exports.Banner = exports.ComplexAlert = exports.VStack = exports.HStack = exports.Divider = exports.ColoredBadge = exports.ParagraphStyle2 = exports.BenefitNumber = exports.RainbowSpan = exports.ArrowSvgBottom = exports.ArrowSvgRight0 = exports.SquiglyDivider = exports.SmallSquiglyDivider = exports.LogoNotificationContainer = exports.LogoNotification = exports.BlurBall = exports.FadeInSection = exports.RelativeBox = exports.CentralizedContainer = exports.SectionHeader = exports.SectionGroup = exports.PageHeader = exports.ParagraphStyle = exports.Section = exports.BorderWidth = exports.ColorBorder = exports.ColorForeground = exports.ColorBackground = exports.ColorPink = exports.MaxWidth = exports.LinkFontFamily = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
+var color_1 = require("@theme-ui/color");
 var framer_motion_1 = require("framer-motion");
 var react_1 = require("react");
 var react_intersection_observer_1 = require("react-intersection-observer");
 var reflexbox_1 = require("reflexbox");
 var styled_components_1 = __importStar(require("styled-components"));
 var theme_ui_1 = require("theme-ui");
+var theme_1 = require("./theme");
 exports.LinkFontFamily = 'Poppins, sans-serif';
 exports.MaxWidth = 1150;
 // export const ColorBackground = "#fdf8f7"
@@ -53,7 +66,7 @@ exports.ColorForeground = '#fafafa';
 // export const BORDER_COLOR = 'rgba(0,0,0,.1)'
 exports.ColorBorder = 'rgba(0,0,0,1)';
 exports.BorderWidth = 2;
-exports.Section = (0, styled_components_1.default)(reflexbox_1.Box).attrs({})(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    max-width: ", "px;\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"], ["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    max-width: ", "px;\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"])), function (props) { var _a; return ((_a = props.theme) === null || _a === void 0 ? void 0 : _a.maxWidth) || exports.MaxWidth; });
+exports.Section = (0, styled_components_1.default)(theme_ui_1.Box).attrs({})(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    max-width: ", "px;\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"], ["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    max-width: ", "px;\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"])), function (props) { var _a; return ((_a = props.theme) === null || _a === void 0 ? void 0 : _a.maxWidth) || exports.MaxWidth; });
 exports.ParagraphStyle = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  font-size: 20px;\n\n  & > h1 {\n    color: inherit;\n    font-size: 1.2em;\n    line-height: 1.5;\n    /* letter-spacing: .5px; */\n    font-weight: 500;\n  }\n\n  & > h2 {\n    color: inherit;\n    font-size: 1em;\n    line-height: 1.4;\n    /* margin-bottom: 10px; */\n    max-width: 700px;\n  }\n\n  & > h4 {\n    color: inherit;\n    font-weight: 700;\n    line-height: 1.4;\n    font-size: 18px;\n    text-transform: uppercase;\n    opacity: 0.2;\n  }\n\n  & > h3 {\n    color: inherit;\n    font-weight: 500;\n    line-height: 1.4;\n    font-size: 22px;\n    /* opacity: .6; */\n    /* color: #bf0023; */\n  }\n\n  & > p {\n    margin-bottom: 1em;\n    line-height: 1.7;\n    font-weight: 400;\n    font-size: 1em;\n    color: #666;\n\n    strong,\n    a {\n      opacity: 1;\n      font-weight: 600;\n      color: #000;\n    }\n  }\n"], ["\n  font-size: 20px;\n\n  & > h1 {\n    color: inherit;\n    font-size: 1.2em;\n    line-height: 1.5;\n    /* letter-spacing: .5px; */\n    font-weight: 500;\n  }\n\n  & > h2 {\n    color: inherit;\n    font-size: 1em;\n    line-height: 1.4;\n    /* margin-bottom: 10px; */\n    max-width: 700px;\n  }\n\n  & > h4 {\n    color: inherit;\n    font-weight: 700;\n    line-height: 1.4;\n    font-size: 18px;\n    text-transform: uppercase;\n    opacity: 0.2;\n  }\n\n  & > h3 {\n    color: inherit;\n    font-weight: 500;\n    line-height: 1.4;\n    font-size: 22px;\n    /* opacity: .6; */\n    /* color: #bf0023; */\n  }\n\n  & > p {\n    margin-bottom: 1em;\n    line-height: 1.7;\n    font-weight: 400;\n    font-size: 1em;\n    color: #666;\n\n    strong,\n    a {\n      opacity: 1;\n      font-weight: 600;\n      color: #000;\n    }\n  }\n"])));
 exports.PageHeader = (0, styled_components_1.default)(reflexbox_1.Flex).attrs({
     // width: [1, 1, MaxWidth],
@@ -83,7 +96,7 @@ exports.SectionHeader = styled_components_1.default.div(templateObject_11 || (te
     return props.center && (0, styled_components_1.css)(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n      text-align: center;\n      display: flex;\n      align-items: center;\n      flex-direction: column;\n      h1 {\n        text-align: center;\n      }\n    "], ["\n      text-align: center;\n      display: flex;\n      align-items: center;\n      flex-direction: column;\n      h1 {\n        text-align: center;\n      }\n    "])));
 });
 exports.CentralizedContainer = (0, styled_components_1.default)(exports.Section)(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  padding-top: 40px;\n  padding-bottom: 40px;\n\n  h1 {\n    text-align: center;\n    margin-bottom: 40px;\n    font-size: 22px;\n  }\n"], ["\n  padding-top: 40px;\n  padding-bottom: 40px;\n\n  h1 {\n    text-align: center;\n    margin-bottom: 40px;\n    font-size: 22px;\n  }\n"])));
-exports.RelativeBox = (0, styled_components_1.default)(reflexbox_1.Box)(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
+exports.RelativeBox = (0, styled_components_1.default)(theme_ui_1.Box)(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
 function FadeInSection(props) {
     var controls = (0, framer_motion_1.useAnimation)();
     var _a = (0, react_intersection_observer_1.useInView)(), ref = _a[0], inView = _a[1];
@@ -165,4 +178,141 @@ exports.BenefitNumber = styled_components_1.default.div(templateObject_17 || (te
 exports.ParagraphStyle2 = styled_components_1.default.div(templateObject_19 || (templateObject_19 = __makeTemplateObject(["\n  ", "\n\n  h1 {\n    /* color: inherit; */\n    line-height: 1.5;\n    /* letter-spacing: .5px; */\n    font-weight: 500;\n    font-size: 3em;\n    line-height: 1.3;\n  }\n\n  h2 {\n    /* color: inherit; */\n    font-size: 1.5em;\n    line-height: 1.4;\n    /* margin-bottom: 10px; */\n    max-width: 700px;\n  }\n\n  h3 {\n    /* color: inherit; */\n    font-weight: 500;\n    line-height: 1.4;\n    font-size: 22px;\n    opacity: 0.4;\n    /* color: #bf0023; */\n  }\n\n  p {\n    margin-bottom: 1em;\n    line-height: 1.7;\n    font-size: 1.6em;\n    font-weight: 400;\n    letter-spacing: 0.3px;\n    font-weight: 500;\n    color: #888;\n\n    strong {\n      opacity: 1;\n      font-weight: 600;\n      color: black;\n    }\n\n    a {\n      /* border-bottom: 2px solid #888; */\n    }\n  }\n"], ["\n  ", "\n\n  h1 {\n    /* color: inherit; */\n    line-height: 1.5;\n    /* letter-spacing: .5px; */\n    font-weight: 500;\n    font-size: 3em;\n    line-height: 1.3;\n  }\n\n  h2 {\n    /* color: inherit; */\n    font-size: 1.5em;\n    line-height: 1.4;\n    /* margin-bottom: 10px; */\n    max-width: 700px;\n  }\n\n  h3 {\n    /* color: inherit; */\n    font-weight: 500;\n    line-height: 1.4;\n    font-size: 22px;\n    opacity: 0.4;\n    /* color: #bf0023; */\n  }\n\n  p {\n    margin-bottom: 1em;\n    line-height: 1.7;\n    font-size: 1.6em;\n    font-weight: 400;\n    letter-spacing: 0.3px;\n    font-weight: 500;\n    color: #888;\n\n    strong {\n      opacity: 1;\n      font-weight: 600;\n      color: black;\n    }\n\n    a {\n      /* border-bottom: 2px solid #888; */\n    }\n  }\n"])), function (props) {
     return props.center && (0, styled_components_1.css)(templateObject_18 || (templateObject_18 = __makeTemplateObject(["\n      text-align: center;\n      width: 100%;\n    "], ["\n      text-align: center;\n      width: 100%;\n    "])));
 });
+var ColoredBadge = function (_a) {
+    var color = _a.color, sx = _a.sx, children = _a.children, others = __rest(_a, ["color", "sx", "children"]);
+    var _b = (0, theme_ui_1.useThemeUI)(), colorMode = _b.colorMode, setColorMode = _b.setColorMode;
+    color !== null && color !== void 0 ? color : (color = '#AAA');
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Badge, __assign({ sx: __assign(__assign({}, sx), { color: colorMode === 'dark' ? (0, color_1.saturate)(color, 0.8) : (0, color_1.darken)(color, 0.2), bg: (0, color_1.transparentize)(color, 0.9) }) }, others, { children: children }), void 0));
+};
+exports.ColoredBadge = ColoredBadge;
+function Divider(props) {
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, { sx: {
+            height: props.big ? [50, 90] : [20, 30]
+        } }, void 0));
+}
+exports.Divider = Divider;
+// Record<string, any> & {
+//   gap?: number | string
+//   children: React.ReactNode
+// })
+function HStack(_a) {
+    var _b = _a.gap, gap = _b === void 0 ? 3 : _b, children = _a.children, others = __rest(_a, ["gap", "children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({}, others, { sx: __assign({ display: 'flex', gridGap: gap, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }, others.sx) }, { children: children }), void 0));
+}
+exports.HStack = HStack;
+function VStack(_a) {
+    var _b = _a.gap, gap = _b === void 0 ? 3 : _b, children = _a.children, others = __rest(_a, ["gap", "children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({}, others, { sx: __assign({ display: 'flex', gridGap: gap, alignItems: 'flex-start', flexDirection: 'column', 
+            // Remove the natural margins from the children of VStack (unless they use a div,
+            // so as to leave one way to still change the margins)
+            '& > :not(div)': {
+                marginBottom: 0
+            } }, others.sx) }, { children: children }), void 0));
+}
+exports.VStack = VStack;
+function ComplexAlert(_a) {
+    var icon = _a.icon, variant = _a.variant, children = _a.children, onAction = _a.onAction, onClose = _a.onClose, sx = _a.sx, others = __rest(_a, ["icon", "variant", "children", "onAction", "onClose", "sx"]);
+    var iconComponent;
+    if (icon) {
+        iconComponent = (0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ mr: 3 }, { children: icon }), void 0);
+    }
+    var actionEl;
+    if (onClose) {
+        actionEl = ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ ml: 'auto', pl: '4', mr: -2, sx: sx }, others, { children: (0, jsx_runtime_1.jsx)(theme_ui_1.Close, { ml: 'auto', onClick: onClose }, void 0) }), void 0));
+        // } else if (onAction) {
+        //   actionEl = <Link ml="auto" mr={-2} onClick={onClose} />
+    }
+    return ((0, jsx_runtime_1.jsxs)(theme_ui_1.Alert, __assign({ variant: variant !== null && variant !== void 0 ? variant : 'primary' }, { children: [iconComponent, (0, jsx_runtime_1.jsx)(HStack, { children: children }, void 0), actionEl] }), void 0));
+}
+exports.ComplexAlert = ComplexAlert;
+function Banner(_a) {
+    var children = _a.children, variant = _a.variant, right = _a.right, small = _a.small, gap = _a.gap, others = __rest(_a, ["children", "variant", "right", "small", "gap"]);
+    if (!right) {
+        right = ((0, jsx_runtime_1.jsx)("span", { children: (0, jsx_runtime_1.jsx)(exports.Icons.Info, {}, void 0) }, void 0));
+    }
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Card, __assign({ variant: variant !== null && variant !== void 0 ? variant : 'primary', className: small ? 'small' : '' }, others, { sx: __assign({ p: '25px 20px' }, others.sx) }, { children: (0, jsx_runtime_1.jsxs)(HStack, __assign({ sx: { justifyContent: 'space-between' } }, { children: [(0, jsx_runtime_1.jsx)(VStack, __assign({ gap: gap || (small ? '5px' : '10px') }, { children: children }), void 0), (0, jsx_runtime_1.jsx)(VStack, __assign({ sx: { flexGrow: 0, minWidth: 'auto' } }, { children: right }), void 0)] }), void 0) }), void 0));
+}
+exports.Banner = Banner;
+function Smaller(_a) {
+    var children = _a.children, others = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Text, __assign({ variant: 'Smaller', sx: {
+            fontSize: '13px'
+        } }, others, { children: children }), void 0));
+}
+exports.Smaller = Smaller;
+function Breadcrumbs(_a) {
+    var children = _a.children, others = __rest(_a, ["children"]);
+    return (0, jsx_runtime_1.jsx)(HStack, { children: children }, void 0);
+}
+exports.Breadcrumbs = Breadcrumbs;
+function Stats(_a) {
+    var children = _a.children, title = _a.title, others = __rest(_a, ["children", "title"]);
+    return ((0, jsx_runtime_1.jsxs)(VStack, __assign({ gap: '5px', sx: { alignItems: 'flex-end' } }, { children: [(0, jsx_runtime_1.jsx)(theme_ui_1.Text, __assign({ sx: { variant: 'TextDefault', fontSize: '14px', textAlign: 'right' } }, { children: title }), void 0), (0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ variant: 'text.H2' }, { children: children }), void 0)] }), void 0));
+}
+exports.Stats = Stats;
+function SectionContainer(_a) {
+    var children = _a.children, others = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ mb: 5 }, others, { sx: __assign({ 
+            // border: '1px solid black',
+            '&:first-of-type': {
+                pt: 3
+            }, '&:last-child': {
+                pb: 3
+            } }, others.sx) }, { children: children }), void 0));
+}
+exports.SectionContainer = SectionContainer;
+exports.Icons = {
+    Info: function (props) { return ((0, jsx_runtime_1.jsxs)("svg", __assign({ width: '23', height: '25', viewBox: '0 0 24 25', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' }, props, { children: [(0, jsx_runtime_1.jsx)("path", { opacity: '0.2', d: 'M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z', fill: 'black' }, void 0), (0, jsx_runtime_1.jsx)("path", { d: 'M13 12.3571C13 11.8838 12.5523 11.5 12 11.5C11.4477 11.5 11 11.8838 11 12.3571V16.6429C11 17.1162 11.4477 17.5 12 17.5C12.5523 17.5 13 17.1162 13 16.6429V12.3571Z', fill: 'black' }, void 0), (0, jsx_runtime_1.jsx)("path", { d: 'M13 9.5C13 8.94772 12.5523 8.5 12 8.5C11.4477 8.5 11 8.94772 11 9.5C11 10.0523 11.4477 10.5 12 10.5C12.5523 10.5 13 10.0523 13 9.5Z', fill: 'black' }, void 0)] }), void 0)); }
+};
+function Code(_a) {
+    var children = _a.children;
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ sx: {
+            display: 'inline-block',
+            borderRadius: '3px',
+            bg: '#f5f5f5',
+            px: '7px',
+            // py: '0px',
+            border: '.5px solid rgba(0,0,0,.03)'
+        } }, { children: (0, jsx_runtime_1.jsx)(theme_ui_1.Text, __assign({ variant: 'Smaller', sx: { color: theme_1.watchOSColors.pink } }, { children: children }), void 0) }), void 0));
+}
+exports.Code = Code;
+// export function BetterTooltip(
+//   props: {children: React.ReactNode} & TooltipProps
+// ) {
+//   return (
+//     <Box
+//       sx={{
+//         display: 'flex',
+//       }}
+//     >
+//       <Tooltip
+//         {...props}
+//         content={
+//           <Box
+//             sx={{
+//               bg: 'text',
+//               color: 'background',
+//               fontSize: '12px',
+//               p: '2px 6px',
+//               borderRadius: '3px',
+//             }}
+//           >
+//             {props.content}
+//           </Box>
+//         }
+//         statelessProps={{
+//           paddingY: 0,
+//           paddingX: 0,
+//           cursor: 'default',
+//           ...props.statelessProps,
+//         }}
+//       />
+//     </Box>
+//   )
+// }
+function PaddedContainer(_a) {
+    var children = _a.children, rest = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Container, __assign({}, rest, { sx: __assign({ px: [15, 0, 0], width: ['100%', '1340px'] }, rest.sx) }, { children: children }), void 0));
+}
+exports.PaddedContainer = PaddedContainer;
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17, templateObject_18, templateObject_19;
