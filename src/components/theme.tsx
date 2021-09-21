@@ -7,11 +7,7 @@
 // https://primer.style/components/theme-reference
 
 import { darken, mix, transparentize } from '@theme-ui/color'
-import {
-  BoxProps as OriginalBoxProps
-} from 'theme-ui'
-
-type BoxProps = { css?: any } & OriginalBoxProps
+import { Theme } from 'theme-ui'
 
 export const watchOSColors = {
   'antique-white': '#CDA986',
@@ -563,7 +559,7 @@ export default {
     root: {
       color: 'text',
       minHeight: '100vh',
-      textRendering: 'optimizeLegibility',
+      textRendering: 'optimizeLegibility' as any,
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
       a: {
@@ -588,4 +584,4 @@ export default {
     },
     nav: {}
   }
-}
+} as Theme

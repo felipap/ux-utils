@@ -1,15 +1,16 @@
-import { darken, saturate, mix, transparentize } from '@theme-ui/color'
+import { darken, saturate, transparentize } from '@theme-ui/color'
 import { motion, useAnimation } from 'framer-motion'
-import { useEffect, useState } from 'react'
+// import {Tooltip, TooltipProps} from 'evergreen-ui'
+import React, { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { Box as ReflexboxBox, Flex } from 'reflexbox'
+import { Box, Flex } from 'reflexbox'
 import styled, { css } from 'styled-components'
 import {
   Alert,
   Badge, BoxProps as OriginalBoxProps,
+  Box as ThemeBox,
   Card,
   Close,
-  Box,
   Container, Text, ThemeUIStyleObject,
   useThemeUI
 } from 'theme-ui'
@@ -140,7 +141,7 @@ export const PageHeader = styled(Flex).attrs({
   /* color: red; */
   font-size: 17px;
 
-  ${props =>
+  ${(props: any) =>
     props.center &&
     css`
       text-align: center !important;
@@ -173,7 +174,7 @@ export const PageHeader = styled(Flex).attrs({
   }
 `
 
-export const SectionGroup = styled.div`
+export const SectionGroup = styled.div<{ invert?: boolean, white?: boolean, black?: boolean }>`
   overflow: hidden; // by default, might be overridden...
   background: transparent;
 
@@ -261,7 +262,7 @@ export const RelativeBox = styled(Box)`
   position: relative;
 `
 
-export function FadeInSection(props) {
+export function FadeInSection(props: { children: React.ReactNode }) {
   const controls = useAnimation()
   const [ref, inView] = useInView()
 
@@ -296,7 +297,7 @@ export function FadeInSection(props) {
   )
 }
 
-export const BlurBall = styled.div`
+export const BlurBall = styled.div<{ color: any }>`
   position: relative;
   right: 10px;
   /* opacity: ; */
@@ -310,12 +311,13 @@ export const BlurBall = styled.div`
     width: 240px;
     height: 240px;
     background: ${props =>
+  // @ts-ignore
   ({
     yellow: 'gold',
     pink: '#F16994',
     green: '#F19469',
     blue: 'cornflowerblue'
-  }[props.color] ||
+  }[props.color as any] ||
     props.color ||
     '#F16994')};
   }
@@ -571,7 +573,7 @@ export const ColoredBadge = ({
 
 export function Divider(props: { big?: boolean }) {
   return (
-    <Box
+    <ThemeBox
       sx={{
         height: props.big ? [50, 90] : [20, 30]
       }}
@@ -591,7 +593,7 @@ type StackProps = {
 
 export function HStack({ gap = 3, children, ...others }: StackProps) {
   return (
-    <Box
+    <ThemeBox
       {...others}
       sx={{
         display: 'flex',
@@ -603,13 +605,13 @@ export function HStack({ gap = 3, children, ...others }: StackProps) {
       }}
     >
       {children}
-    </Box>
+    </ThemeBox>
   )
 }
 
 export function VStack({ gap = 3, children, ...others }: StackProps) {
   return (
-    <Box
+    <ThemeBox
       {...others}
       sx={{
         display: 'flex',
@@ -625,7 +627,7 @@ export function VStack({ gap = 3, children, ...others }: StackProps) {
       }}
     >
       {children}
-    </Box>
+    </ThemeBox>
   )
 }
 
@@ -652,9 +654,9 @@ export function ComplexAlert({
   let actionEl
   if (onClose) {
     actionEl = (
-      <Box ml='auto' pl='4' mr={-2} sx={sx} {...others}>
+      <ThemeBox ml='auto' pl='4' mr={-2} sx={sx} {...others}>
         <Close ml='auto' onClick={onClose} />
-      </Box>
+      </ThemeBox>
     )
     // } else if (onAction) {
     //   actionEl = <Link ml="auto" mr={-2} onClick={onClose} />
@@ -745,7 +747,7 @@ export function Stats({
   return (
     <VStack gap='5px' sx={{ alignItems: 'flex-end' }}>
       <Text sx={{ variant: 'TextDefault', fontSize: '14px', textAlign: 'right' }}>{title}</Text>
-      <Box variant='text.H2'>{children}</Box>
+      <Text variant='text.H2'>{children}</Text>
     </VStack>
   )
 }
@@ -757,7 +759,7 @@ export function SectionContainer({
   children: React.ReactNode
 } & Omit<BoxProps, 'children'>) {
   return (
-    <Box
+    <ThemeBox
       mb={5}
       {...others}
       sx={{
@@ -772,7 +774,7 @@ export function SectionContainer({
       }}
     >
       {children}
-    </Box>
+    </ThemeBox>
   )
 }
 
@@ -805,7 +807,7 @@ export const Icons = {
 
 export function Code({ children }: { children: React.ReactNode }) {
   return (
-    <Box
+    <ThemeBox
       sx={{
         display: 'inline-block',
         borderRadius: '3px',
@@ -818,7 +820,7 @@ export function Code({ children }: { children: React.ReactNode }) {
       <Text variant='Smaller' sx={{ color: watchOSColors.pink }}>
         {children}
       </Text>
-    </Box>
+    </ThemeBox>
   )
 }
 
