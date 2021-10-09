@@ -575,7 +575,7 @@ export function Divider(props: { big?: boolean }) {
   return (
     <ThemeBox
       sx={{
-        height: props.big ? [50, 90] : [20, 30]
+        height: props.big ? [50, 110] : [20, 30]
       }}
     />
   )

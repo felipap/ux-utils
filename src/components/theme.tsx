@@ -473,9 +473,13 @@ export default {
       }
     },
     secondary: {
-      variant: 'buttons.base',
-      color: darken('primary', 0.2),
-      bg: transparentize('primary', 0.8)
+      variant: 'buttons.primary',
+      color: darken('primary', 0.3),
+      // bg: transparentize('primary', 0.9),
+      bg: 'foreground',
+      '&:hover': {
+        color: 'primary' // Required when rendering Links as primary buttons.
+      }
     },
     plain: {
       variant: 'buttons.base',
