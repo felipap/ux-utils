@@ -222,6 +222,7 @@ export default {
       dark: {
         text: '#fff',
         background: '#141719',
+        link: 'white',
         foreground: '#000',
         primary: '#3cf',
         secondary: '#e0f',
@@ -329,7 +330,7 @@ export default {
       fontSize: ['45px', '56px'],
       lineHeight: 1.3,
       letterSpacing: '-1px',
-      fontFamily: 'Poppins, sans-serif'
+      fontFamily: 'heading'
     },
     PreTitle: {
       variant: 'text.TextDefault',
@@ -577,10 +578,10 @@ export default {
     a: {
       color: 'link',
       textDecoration: 'none',
-      transform: '200ms all ',
+      transition: '200ms all',
       '&:hover': {
         color: 'link',
-        opacity: 0.7
+        opacity: 0.9
       }
     },
     img: {

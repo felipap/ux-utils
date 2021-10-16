@@ -12,7 +12,8 @@ import {
   Card,
   Close,
   Container, Text, ThemeUIStyleObject,
-  useThemeUI
+  useThemeUI,
+  Heading
 } from 'theme-ui'
 import { watchOSColors } from './theme'
 
@@ -866,3 +867,27 @@ export function PaddedContainer({ children, ...rest }: BoxProps) {
     </Container>
   )
 }
+
+export const Title = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='Title' {...rest}>
+    {children}
+  </Heading>
+)
+
+export const H1 = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='H1' {...rest}>
+    {children}
+  </Heading>
+)
+
+export const H2 = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='H2' {...rest}>
+    {children}
+  </Heading>
+)
+
+export const H3 = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='H3' {...rest}>
+    {children}
+  </Heading>
+)
