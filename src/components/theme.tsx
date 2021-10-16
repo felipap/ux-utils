@@ -161,8 +161,7 @@ export default {
     useColorSchemeMediaQuery: false
   },
   fonts: {
-    body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Sefgoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Sefgoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'Poppins, system-ui, -apple-system, Roboto, sans-serif',
     monospace: 'Menlo, monospace'
   },
@@ -567,6 +566,12 @@ export default {
       textRendering: 'optimizeLegibility' as any,
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
+      overflowX: 'hidden',
+      maxWidth: '100%',
+      body: {
+        overflowX: 'hidden',
+        maxWidth: '100%'
+      },
       a: {
         variant: 'styles.a'
       }
