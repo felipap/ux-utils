@@ -293,7 +293,6 @@ export default {
       color: 'text',
       // color: transparentize('text', 0.5),
       strong: {
-        color: 'text',
         fontWeight: 600
       }
     },

@@ -7,15 +7,17 @@ import { Box, Flex } from 'reflexbox'
 import styled, { css } from 'styled-components'
 import {
   Alert,
-  Badge, BoxProps as OriginalBoxProps,
+  Badge,
+  BoxProps as OriginalBoxProps,
   Box as ThemeBox,
   Card,
   Close,
-  Container, Text, ThemeUIStyleObject,
+  Container,
+  Text,
+  ThemeUIStyleObject,
   useThemeUI
 } from 'theme-ui'
 import { watchOSColors } from './theme'
-
 
 type BoxProps = { css?: any } & OriginalBoxProps
 
@@ -174,7 +176,7 @@ export const PageHeader = styled(Flex).attrs({
   }
 `
 
-export const SectionGroup = styled.div<{ invert?: boolean, white?: boolean, black?: boolean }>`
+export const SectionGroup = styled.div<{ invert?: boolean; white?: boolean; black?: boolean }>`
   overflow: hidden; // by default, might be overridden...
   background: transparent;
 
@@ -200,7 +202,7 @@ filter: ${props => (props.invert ? 'invert(1)' : 'none')};
   @media (max-width: 800px) {
     border-bottom: 2px solid #00000011;
     border-bottom-width: ${props =>
-    (props.white && ColorForeground) || props.invert ? '0' : '2px'};
+      (props.white && ColorForeground) || props.invert ? '0' : '2px'};
   }
 
   ${props =>
@@ -311,15 +313,15 @@ export const BlurBall = styled.div<{ color: any }>`
     width: 240px;
     height: 240px;
     background: ${props =>
-  // @ts-ignore
-  ({
-    yellow: 'gold',
-    pink: '#F16994',
-    green: '#F19469',
-    blue: 'cornflowerblue'
-  }[props.color as any] ||
-    props.color ||
-    '#F16994')};
+      // @ts-ignore
+      ({
+        yellow: 'gold',
+        pink: '#F16994',
+        green: '#F19469',
+        blue: 'cornflowerblue'
+      }[props.color as any] ||
+      props.color ||
+      '#F16994')};
   }
 `
 
@@ -541,8 +543,6 @@ export const ParagraphStyle2 = styled.div<{ center?: boolean }>`
   }
 `
 
-
-
 export const ColoredBadge = ({
   color,
   sx,
@@ -581,9 +581,10 @@ export function Divider(props: { big?: boolean }) {
   )
 }
 
-type StackProps = {
-  gap?: number | string
+export type StackProps = {
+  gap?: number | string | number[]
   children?: React.ReactNode
+  stretch?: boolean
 } & BoxProps
 
 // Record<string, any> & {
@@ -609,14 +610,14 @@ export function HStack({ gap = 3, children, ...others }: StackProps) {
   )
 }
 
-export function VStack({ gap = 3, children, ...others }: StackProps) {
+export function VStack({ gap = 3, children, stretch, ...others }: StackProps) {
   return (
     <ThemeBox
       {...others}
       sx={{
         display: 'flex',
         gridGap: gap,
-        alignItems: 'flex-start',
+        alignItems: stretch ? 'stretch' : 'flex-start',
         flexDirection: 'column',
         // Remove the natural margins from the children of VStack (unless they use a div,
         // so as to leave one way to still change the margins)
@@ -861,7 +862,7 @@ export function Code({ children }: { children: React.ReactNode }) {
 
 export function PaddedContainer({ children, ...rest }: BoxProps) {
   return (
-    <Container {...rest} sx={{ px: [15, 0, 0], width: ['100%', '1340px'], ...rest.sx }}>
+    <Container {...rest} sx={{ px: [15, 0, 0], ...rest.sx }}>
       {children}
     </Container>
   )
