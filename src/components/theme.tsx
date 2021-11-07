@@ -161,8 +161,7 @@ export default {
     useColorSchemeMediaQuery: false
   },
   fonts: {
-    body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Sefgoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Sefgoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'Poppins, system-ui, -apple-system, Roboto, sans-serif',
     monospace: 'Menlo, monospace'
   },
@@ -222,6 +221,7 @@ export default {
       dark: {
         text: '#fff',
         background: '#141719',
+        link: 'white',
         foreground: '#000',
         primary: '#3cf',
         secondary: '#e0f',
@@ -328,7 +328,7 @@ export default {
       fontSize: ['45px', '56px'],
       lineHeight: 1.3,
       letterSpacing: '-1px',
-      fontFamily: 'Poppins, sans-serif'
+      fontFamily: 'heading'
     },
     PreTitle: {
       variant: 'text.TextDefault',
@@ -565,6 +565,12 @@ export default {
       textRendering: 'optimizeLegibility' as any,
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
+      overflowX: 'hidden',
+      maxWidth: '100%',
+      body: {
+        overflowX: 'hidden',
+        maxWidth: '100%'
+      },
       a: {
         variant: 'styles.a'
       }
@@ -576,10 +582,10 @@ export default {
     a: {
       color: 'link',
       textDecoration: 'none',
-      transform: '200ms all ',
+      transition: '200ms all',
       '&:hover': {
         color: 'link',
-        opacity: 0.7
+        opacity: 0.9
       }
     },
     img: {

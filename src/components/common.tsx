@@ -7,13 +7,9 @@ import { Box, Flex } from 'reflexbox'
 import styled, { css } from 'styled-components'
 import {
   Alert,
-  Badge,
-  BoxProps as OriginalBoxProps,
-  Box as ThemeBox,
-  Card,
+  Badge, Box as ThemeBox, BoxProps as OriginalBoxProps, Card,
   Close,
-  Container,
-  Text,
+  Container, Heading, Text,
   ThemeUIStyleObject,
   useThemeUI
 } from 'theme-ui'
@@ -867,3 +863,27 @@ export function PaddedContainer({ children, ...rest }: BoxProps) {
     </Container>
   )
 }
+
+export const Title = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='Title' {...rest}>
+    {children}
+  </Heading>
+)
+
+export const H1 = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='H1' {...rest}>
+    {children}
+  </Heading>
+)
+
+export const H2 = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='H2' {...rest}>
+    {children}
+  </Heading>
+)
+
+export const H3 = ({ children, ...rest }: BoxProps) => (
+  <Heading variant='H3' {...rest}>
+    {children}
+  </Heading>
+)
