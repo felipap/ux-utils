@@ -1,7 +1,10 @@
 
 import React, { useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
-import { ColorBackground, ColorForeground, ColorPink } from './common'
+
+const ColorPink = '#fdf8f7'
+const ColorBackground = '#fff'
+const ColorForeground = '#fafafa'
 
 const HEIGHT = 115
 

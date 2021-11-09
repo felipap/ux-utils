@@ -283,7 +283,6 @@ export default {
       // items.
       mt: 0,
       mb: 0,
-      textShadow: '0 0 3px #00000011'
     },
     paragraph: {
       variant: 'text.TextDefault',
@@ -304,7 +303,6 @@ export default {
       color: 'inherit',
       fontFamily: 'heading',
       mb: 0,
-      textShadow: '0 0 3px #00000011',
       maxWidth: '850px'
     },
     navLink: {

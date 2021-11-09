@@ -7,9 +7,14 @@ import { Box, Flex } from 'reflexbox'
 import styled, { css } from 'styled-components'
 import {
   Alert,
-  Badge, Box as ThemeBox, BoxProps as OriginalBoxProps, Card,
+  Badge,
+  Box as ThemeBox,
+  BoxProps as OriginalBoxProps,
+  Card,
   Close,
-  Container, Heading, Text,
+  Container,
+  Heading,
+  Text,
   ThemeUIStyleObject,
   useThemeUI
 } from 'theme-ui'
@@ -18,10 +23,8 @@ import { watchOSColors } from './theme'
 type BoxProps = { css?: any } & OriginalBoxProps
 
 export const LinkFontFamily = 'Poppins, sans-serif'
-export const MaxWidth = 1150
 // export const ColorBackground = "#fdf8f7"
 // export const ColorForeground = "#fff"
-export const ColorPink = '#fdf8f7'
 export const ColorBackground = '#fff'
 export const ColorForeground = '#fafafa'
 // export const ColorForeground = '#fdf8f7'
@@ -41,7 +44,6 @@ export const Section = styled(Box).attrs({})`
   > div,
   > header,
   > section {
-    max-width: ${props => props.theme?.maxWidth || MaxWidth}px;
     width: 100%;
     text-align: left;
   }
@@ -181,11 +183,7 @@ export const SectionGroup = styled.div<{ invert?: boolean; white?: boolean; blac
     css`
       background: black;
     `}
-  ${props =>
-    props.white &&
-    css`
-      background: ${ColorPink};
-    `}
+  ${props => props.white && css``}
   ${props =>
     props.white &&
     props.invert &&
@@ -578,9 +576,10 @@ export function Divider(props: { big?: boolean }) {
 }
 
 export type StackProps = {
-  gap?: number | string | number[]
+  gap?: number | string | (number | string)[]
   children?: React.ReactNode
   stretch?: boolean
+  center?: boolean
 } & BoxProps
 
 // Record<string, any> & {
@@ -588,7 +587,7 @@ export type StackProps = {
 //   children: React.ReactNode
 // })
 
-export function HStack({ gap = 3, children, ...others }: StackProps) {
+export function HStack({ gap = 3, children, stretch, center, ...others }: StackProps) {
   return (
     <ThemeBox
       {...others}
@@ -597,7 +596,8 @@ export function HStack({ gap = 3, children, ...others }: StackProps) {
         gridGap: gap,
         flexWrap: 'wrap',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        width: stretch ? '100%' : undefined,
+        justifyContent: center ? 'center' : 'space-between',
         ...others.sx
       }}
     >
@@ -606,14 +606,14 @@ export function HStack({ gap = 3, children, ...others }: StackProps) {
   )
 }
 
-export function VStack({ gap = 3, children, stretch, ...others }: StackProps) {
+export function VStack({ gap = 3, children, center, stretch, ...others }: StackProps) {
   return (
     <ThemeBox
       {...others}
       sx={{
         display: 'flex',
         gridGap: gap,
-        alignItems: stretch ? 'stretch' : 'flex-start',
+        alignItems: stretch ? 'stretch' : center ? 'center' : 'flex-start',
         flexDirection: 'column',
         // Remove the natural margins from the children of VStack (unless they use a div,
         // so as to leave one way to still change the margins)
