@@ -1,5 +1,5 @@
 import { getSvgPath } from 'figma-squircle'
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { withSize, SizeMeProps } from 'react-sizeme'
 import { Box, BoxProps } from 'theme-ui'
 
