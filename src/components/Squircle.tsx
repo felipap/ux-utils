@@ -13,6 +13,7 @@ export const Squircle = withSize({ monitorHeight: true })(function ({
   children,
   radius,
   smoothing,
+  // @ts-ignore
   size,
   ...rest
 }: SquircleProps) {

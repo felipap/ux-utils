@@ -1,4 +1,3 @@
-/// <reference types="react" />
 interface Props {
     from?: string;
     to?: string;

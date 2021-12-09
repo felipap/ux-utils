@@ -1,4 +1,3 @@
-/// <reference types="react" />
 export declare function TiktokIcon(): JSX.Element;
 export declare function YoutubeIcon(): JSX.Element;
 export declare function InstagramIcon(): JSX.Element;

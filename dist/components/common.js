@@ -45,10 +45,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PaddedContainer = exports.Code = exports.Icons = exports.SectionContainer = exports.Stats = exports.Breadcrumbs = exports.Smaller = exports.Banner = exports.ComplexAlert = exports.VStack = exports.HStack = exports.Divider = exports.ColoredBadge = exports.ParagraphStyle2 = exports.BenefitNumber = exports.RainbowSpan = exports.ArrowSvgBottom = exports.ArrowSvgRight0 = exports.SquiglyDivider = exports.SmallSquiglyDivider = exports.LogoNotificationContainer = exports.LogoNotification = exports.BlurBall = exports.FadeInSection = exports.RelativeBox = exports.CentralizedContainer = exports.SectionHeader = exports.SectionGroup = exports.PageHeader = exports.ParagraphStyle = exports.Section = exports.BorderWidth = exports.ColorBorder = exports.ColorForeground = exports.ColorBackground = exports.ColorPink = exports.MaxWidth = exports.LinkFontFamily = void 0;
+exports.H3 = exports.H2 = exports.H1 = exports.Title = exports.PaddedContainer = exports.Code = exports.Icons = exports.SectionContainer = exports.Stats = exports.Breadcrumbs = exports.Smaller = exports.Banner = exports.ComplexAlert = exports.VStack = exports.HStack = exports.Divider = exports.ColoredBadge = exports.ParagraphStyle2 = exports.BenefitNumber = exports.RainbowSpan = exports.ArrowSvgBottom = exports.ArrowSvgRight0 = exports.SquiglyDivider = exports.SmallSquiglyDivider = exports.LogoNotificationContainer = exports.LogoNotification = exports.BlurBall = exports.FadeInSection = exports.RelativeBox = exports.CentralizedContainer = exports.SectionHeader = exports.SectionGroup = exports.PageHeader = exports.ParagraphStyle = exports.Section = exports.BorderWidth = exports.ColorBorder = exports.ColorForeground = exports.ColorBackground = exports.LinkFontFamily = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var color_1 = require("@theme-ui/color");
 var framer_motion_1 = require("framer-motion");
+// import {Tooltip, TooltipProps} from 'evergreen-ui'
 var react_1 = require("react");
 var react_intersection_observer_1 = require("react-intersection-observer");
 var reflexbox_1 = require("reflexbox");
@@ -56,17 +57,15 @@ var styled_components_1 = __importStar(require("styled-components"));
 var theme_ui_1 = require("theme-ui");
 var theme_1 = require("./theme");
 exports.LinkFontFamily = 'Poppins, sans-serif';
-exports.MaxWidth = 1150;
 // export const ColorBackground = "#fdf8f7"
 // export const ColorForeground = "#fff"
-exports.ColorPink = '#fdf8f7';
 exports.ColorBackground = '#fff';
 exports.ColorForeground = '#fafafa';
 // export const ColorForeground = '#fdf8f7'
 // export const BORDER_COLOR = 'rgba(0,0,0,.1)'
 exports.ColorBorder = 'rgba(0,0,0,1)';
 exports.BorderWidth = 2;
-exports.Section = (0, styled_components_1.default)(theme_ui_1.Box).attrs({})(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    max-width: ", "px;\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"], ["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    max-width: ", "px;\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"])), function (props) { var _a; return ((_a = props.theme) === null || _a === void 0 ? void 0 : _a.maxWidth) || exports.MaxWidth; });
+exports.Section = (0, styled_components_1.default)(reflexbox_1.Box).attrs({})(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"], ["\n  max-width: 100%;\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  padding: 80px 0;\n  /* overflow: hidden; // by default, might be overridden... */\n\n  > div,\n  > header,\n  > section {\n    width: 100%;\n    text-align: left;\n  }\n\n  @media (max-width: 800px) {\n    padding: 40px 20px 40px;\n    font-size: 12px;\n  }\n\n  p {\n    font-size: 20px;\n    line-height: 1.8;\n  }\n\n  a {\n    /* color: #ce00ff; */\n  }\n\n  h1,\n  h2,\n  h3 {\n    color: inherit;\n\n    i {\n      opacity: 0.6;\n    }\n  }\n"])));
 exports.ParagraphStyle = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  font-size: 20px;\n\n  & > h1 {\n    color: inherit;\n    font-size: 1.2em;\n    line-height: 1.5;\n    /* letter-spacing: .5px; */\n    font-weight: 500;\n  }\n\n  & > h2 {\n    color: inherit;\n    font-size: 1em;\n    line-height: 1.4;\n    /* margin-bottom: 10px; */\n    max-width: 700px;\n  }\n\n  & > h4 {\n    color: inherit;\n    font-weight: 700;\n    line-height: 1.4;\n    font-size: 18px;\n    text-transform: uppercase;\n    opacity: 0.2;\n  }\n\n  & > h3 {\n    color: inherit;\n    font-weight: 500;\n    line-height: 1.4;\n    font-size: 22px;\n    /* opacity: .6; */\n    /* color: #bf0023; */\n  }\n\n  & > p {\n    margin-bottom: 1em;\n    line-height: 1.7;\n    font-weight: 400;\n    font-size: 1em;\n    color: #666;\n\n    strong,\n    a {\n      opacity: 1;\n      font-weight: 600;\n      color: #000;\n    }\n  }\n"], ["\n  font-size: 20px;\n\n  & > h1 {\n    color: inherit;\n    font-size: 1.2em;\n    line-height: 1.5;\n    /* letter-spacing: .5px; */\n    font-weight: 500;\n  }\n\n  & > h2 {\n    color: inherit;\n    font-size: 1em;\n    line-height: 1.4;\n    /* margin-bottom: 10px; */\n    max-width: 700px;\n  }\n\n  & > h4 {\n    color: inherit;\n    font-weight: 700;\n    line-height: 1.4;\n    font-size: 18px;\n    text-transform: uppercase;\n    opacity: 0.2;\n  }\n\n  & > h3 {\n    color: inherit;\n    font-weight: 500;\n    line-height: 1.4;\n    font-size: 22px;\n    /* opacity: .6; */\n    /* color: #bf0023; */\n  }\n\n  & > p {\n    margin-bottom: 1em;\n    line-height: 1.7;\n    font-weight: 400;\n    font-size: 1em;\n    color: #666;\n\n    strong,\n    a {\n      opacity: 1;\n      font-weight: 600;\n      color: #000;\n    }\n  }\n"])));
 exports.PageHeader = (0, styled_components_1.default)(reflexbox_1.Flex).attrs({
     // width: [1, 1, MaxWidth],
@@ -82,9 +81,7 @@ exports.PageHeader = (0, styled_components_1.default)(reflexbox_1.Flex).attrs({
 });
 exports.SectionGroup = styled_components_1.default.div(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  overflow: hidden; // by default, might be overridden...\n  background: transparent;\n\n  ", "\n  ", "\n  ", "\n\nfilter: ", ";\n\n  @media (max-width: 800px) {\n    border-bottom: 2px solid #00000011;\n    border-bottom-width: ", ";\n  }\n\n  ", ";\n"], ["\n  overflow: hidden; // by default, might be overridden...\n  background: transparent;\n\n  ", "\n  ", "\n  ", "\n\nfilter: ", ";\n\n  @media (max-width: 800px) {\n    border-bottom: 2px solid #00000011;\n    border-bottom-width: ", ";\n  }\n\n  ", ";\n"])), function (props) {
     return props.black && (0, styled_components_1.css)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n      background: black;\n    "], ["\n      background: black;\n    "])));
-}, function (props) {
-    return props.white && (0, styled_components_1.css)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n      background: ", ";\n    "], ["\n      background: ", ";\n    "])), exports.ColorPink);
-}, function (props) {
+}, function (props) { return props.white && (0, styled_components_1.css)(templateObject_6 || (templateObject_6 = __makeTemplateObject([""], [""]))); }, function (props) {
     return props.white &&
         props.invert && (0, styled_components_1.css)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n      background: white;\n    "], ["\n      background: white;\n    "])));
 }, function (props) { return (props.invert ? 'invert(1)' : 'none'); }, function (props) {
@@ -96,7 +93,7 @@ exports.SectionHeader = styled_components_1.default.div(templateObject_11 || (te
     return props.center && (0, styled_components_1.css)(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n      text-align: center;\n      display: flex;\n      align-items: center;\n      flex-direction: column;\n      h1 {\n        text-align: center;\n      }\n    "], ["\n      text-align: center;\n      display: flex;\n      align-items: center;\n      flex-direction: column;\n      h1 {\n        text-align: center;\n      }\n    "])));
 });
 exports.CentralizedContainer = (0, styled_components_1.default)(exports.Section)(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  padding-top: 40px;\n  padding-bottom: 40px;\n\n  h1 {\n    text-align: center;\n    margin-bottom: 40px;\n    font-size: 22px;\n  }\n"], ["\n  padding-top: 40px;\n  padding-bottom: 40px;\n\n  h1 {\n    text-align: center;\n    margin-bottom: 40px;\n    font-size: 22px;\n  }\n"])));
-exports.RelativeBox = (0, styled_components_1.default)(theme_ui_1.Box)(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
+exports.RelativeBox = (0, styled_components_1.default)(reflexbox_1.Box)(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
 function FadeInSection(props) {
     var controls = (0, framer_motion_1.useAnimation)();
     var _a = (0, react_intersection_observer_1.useInView)(), ref = _a[0], inView = _a[1];
@@ -120,6 +117,7 @@ function FadeInSection(props) {
 }
 exports.FadeInSection = FadeInSection;
 exports.BlurBall = styled_components_1.default.div(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n  position: relative;\n  right: 10px;\n  /* opacity: ; */\n  bottom: 30px;\n  top: 10px;\n  z-index: 10;\n\n  &::before {\n    filter: blur(100px);\n    position: absolute;\n    width: 240px;\n    height: 240px;\n    background: ", ";\n  }\n"], ["\n  position: relative;\n  right: 10px;\n  /* opacity: ; */\n  bottom: 30px;\n  top: 10px;\n  z-index: 10;\n\n  &::before {\n    filter: blur(100px);\n    position: absolute;\n    width: 240px;\n    height: 240px;\n    background: ", ";\n  }\n"])), function (props) {
+    // @ts-ignore
     return ({
         yellow: 'gold',
         pink: '#F16994',
@@ -131,7 +129,7 @@ exports.BlurBall = styled_components_1.default.div(templateObject_14 || (templat
 });
 function LogoNotification(props) {
     var _a = (0, react_1.useState)(true), visible = _a[0], setVisible = _a[1];
-    var keyKey = "seen-logo-notification-" + props.name;
+    var keyKey = "seen-logo-notification-".concat(props.name);
     (0, react_1.useEffect)(function () {
         if (!localStorage) {
             return;
@@ -187,7 +185,7 @@ var ColoredBadge = function (_a) {
 exports.ColoredBadge = ColoredBadge;
 function Divider(props) {
     return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, { sx: {
-            height: props.big ? [50, 90] : [20, 30]
+            height: props.big ? [50, 110] : [20, 30]
         } }, void 0));
 }
 exports.Divider = Divider;
@@ -196,13 +194,13 @@ exports.Divider = Divider;
 //   children: React.ReactNode
 // })
 function HStack(_a) {
-    var _b = _a.gap, gap = _b === void 0 ? 3 : _b, children = _a.children, others = __rest(_a, ["gap", "children"]);
-    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({}, others, { sx: __assign({ display: 'flex', gridGap: gap, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }, others.sx) }, { children: children }), void 0));
+    var _b = _a.gap, gap = _b === void 0 ? 3 : _b, children = _a.children, stretch = _a.stretch, center = _a.center, others = __rest(_a, ["gap", "children", "stretch", "center"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({}, others, { sx: __assign({ display: 'flex', gridGap: gap, flexWrap: 'wrap', alignItems: 'center', width: stretch ? '100%' : undefined, justifyContent: center ? 'center' : 'space-between' }, others.sx) }, { children: children }), void 0));
 }
 exports.HStack = HStack;
 function VStack(_a) {
-    var _b = _a.gap, gap = _b === void 0 ? 3 : _b, children = _a.children, others = __rest(_a, ["gap", "children"]);
-    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({}, others, { sx: __assign({ display: 'flex', gridGap: gap, alignItems: 'flex-start', flexDirection: 'column', 
+    var _b = _a.gap, gap = _b === void 0 ? 3 : _b, children = _a.children, center = _a.center, stretch = _a.stretch, others = __rest(_a, ["gap", "children", "center", "stretch"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({}, others, { sx: __assign({ display: 'flex', gridGap: gap, alignItems: stretch ? 'stretch' : center ? 'center' : 'flex-start', flexDirection: 'column', 
             // Remove the natural margins from the children of VStack (unless they use a div,
             // so as to leave one way to still change the margins)
             '& > :not(div)': {
@@ -214,7 +212,7 @@ function ComplexAlert(_a) {
     var icon = _a.icon, variant = _a.variant, children = _a.children, onAction = _a.onAction, onClose = _a.onClose, sx = _a.sx, others = __rest(_a, ["icon", "variant", "children", "onAction", "onClose", "sx"]);
     var iconComponent;
     if (icon) {
-        iconComponent = (0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ mr: 3 }, { children: icon }), void 0);
+        iconComponent = (0, jsx_runtime_1.jsx)(reflexbox_1.Box, __assign({ mr: 3 }, { children: icon }), void 0);
     }
     var actionEl;
     if (onClose) {
@@ -247,7 +245,7 @@ function Breadcrumbs(_a) {
 exports.Breadcrumbs = Breadcrumbs;
 function Stats(_a) {
     var children = _a.children, title = _a.title, others = __rest(_a, ["children", "title"]);
-    return ((0, jsx_runtime_1.jsxs)(VStack, __assign({ gap: '5px', sx: { alignItems: 'flex-end' } }, { children: [(0, jsx_runtime_1.jsx)(theme_ui_1.Text, __assign({ sx: { variant: 'TextDefault', fontSize: '14px', textAlign: 'right' } }, { children: title }), void 0), (0, jsx_runtime_1.jsx)(theme_ui_1.Box, __assign({ variant: 'text.H2' }, { children: children }), void 0)] }), void 0));
+    return ((0, jsx_runtime_1.jsxs)(VStack, __assign({ gap: '5px', sx: { alignItems: 'flex-end' } }, { children: [(0, jsx_runtime_1.jsx)(theme_ui_1.Text, __assign({ sx: { variant: 'TextDefault', fontSize: '14px', textAlign: 'right' } }, { children: title }), void 0), (0, jsx_runtime_1.jsx)(theme_ui_1.Text, __assign({ variant: 'text.H2' }, { children: children }), void 0)] }), void 0));
 }
 exports.Stats = Stats;
 function SectionContainer(_a) {
@@ -312,7 +310,27 @@ exports.Code = Code;
 // }
 function PaddedContainer(_a) {
     var children = _a.children, rest = __rest(_a, ["children"]);
-    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Container, __assign({}, rest, { sx: __assign({ px: [15, 0, 0], width: ['100%', '1340px'] }, rest.sx) }, { children: children }), void 0));
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Container, __assign({}, rest, { sx: __assign({ px: [15, 0, 0] }, rest.sx) }, { children: children }), void 0));
 }
 exports.PaddedContainer = PaddedContainer;
+var Title = function (_a) {
+    var children = _a.children, rest = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Heading, __assign({ variant: 'Title' }, rest, { children: children }), void 0));
+};
+exports.Title = Title;
+var H1 = function (_a) {
+    var children = _a.children, rest = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Heading, __assign({ variant: 'H1' }, rest, { children: children }), void 0));
+};
+exports.H1 = H1;
+var H2 = function (_a) {
+    var children = _a.children, rest = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Heading, __assign({ variant: 'H2' }, rest, { children: children }), void 0));
+};
+exports.H2 = H2;
+var H3 = function (_a) {
+    var children = _a.children, rest = __rest(_a, ["children"]);
+    return ((0, jsx_runtime_1.jsx)(theme_ui_1.Heading, __assign({ variant: 'H3' }, rest, { children: children }), void 0));
+};
+exports.H3 = H3;
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17, templateObject_18, templateObject_19;

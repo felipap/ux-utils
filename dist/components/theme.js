@@ -214,6 +214,7 @@ exports.default = {
             dark: {
                 text: '#fff',
                 background: '#141719',
+                link: 'white',
                 foreground: '#000',
                 primary: '#3cf',
                 secondary: '#e0f',
@@ -274,7 +275,6 @@ exports.default = {
             // items.
             mt: 0,
             mb: 0,
-            textShadow: '0 0 3px #00000011'
         },
         paragraph: {
             variant: 'text.TextDefault',
@@ -284,7 +284,6 @@ exports.default = {
             color: 'text',
             // color: transparentize('text', 0.5),
             strong: {
-                color: 'text',
                 fontWeight: 600
             }
         },
@@ -296,7 +295,6 @@ exports.default = {
             color: 'inherit',
             fontFamily: 'heading',
             mb: 0,
-            textShadow: '0 0 3px #00000011',
             maxWidth: '850px'
         },
         navLink: {
@@ -320,7 +318,7 @@ exports.default = {
             fontSize: ['45px', '56px'],
             lineHeight: 1.3,
             letterSpacing: '-1px',
-            fontFamily: 'Poppins, sans-serif'
+            fontFamily: 'heading'
         },
         PreTitle: {
             variant: 'text.TextDefault',
@@ -464,9 +462,13 @@ exports.default = {
             }
         },
         secondary: {
-            variant: 'buttons.base',
-            color: (0, color_1.darken)('primary', 0.2),
-            bg: (0, color_1.transparentize)('primary', 0.8)
+            variant: 'buttons.primary',
+            color: (0, color_1.darken)('primary', 0.3),
+            // bg: transparentize('primary', 0.9),
+            bg: 'foreground',
+            '&:hover': {
+                color: 'primary' // Required when rendering Links as primary buttons.
+            }
         },
         plain: {
             variant: 'buttons.base',
@@ -515,7 +517,7 @@ exports.default = {
                 fontWeight: 600
             },
             bg: 'foreground',
-            border: function (t) { return "1px solid " + (0, color_1.transparentize)('text', 0.99)(t); },
+            border: function (t) { return "1px solid ".concat((0, color_1.transparentize)('text', 0.99)(t)); },
             boxShadow: 'voogTwo',
             padding: '15px 20px',
             '&.small': {
@@ -553,6 +555,12 @@ exports.default = {
             textRendering: 'optimizeLegibility',
             WebkitFontSmoothing: 'antialiased',
             MozOsxFontSmoothing: 'grayscale',
+            overflowX: 'hidden',
+            maxWidth: '100%',
+            body: {
+                overflowX: 'hidden',
+                maxWidth: '100%'
+            },
             a: {
                 variant: 'styles.a'
             }
@@ -564,10 +572,10 @@ exports.default = {
         a: {
             color: 'link',
             textDecoration: 'none',
-            transform: '200ms all ',
+            transition: '200ms all',
             '&:hover': {
                 color: 'link',
-                opacity: 0.7
+                opacity: 0.9
             }
         },
         img: {

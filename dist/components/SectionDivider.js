@@ -22,14 +22,16 @@ exports.SectionDivider = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var react_1 = require("react");
 var styled_components_1 = __importDefault(require("styled-components"));
-var common_1 = require("./common");
+var ColorPink = '#fdf8f7';
+var ColorBackground = '#fff';
+var ColorForeground = '#fafafa';
 var HEIGHT = 115;
 function SectionDivider(_a) {
     var _b = _a.from, from = _b === void 0 ? 'white' : _b, _c = _a.to, to = _c === void 0 ? 'white' : _c, _d = _a.flip, flip = _d === void 0 ? false : _d, _e = _a.straight, straight = _e === void 0 ? false : _e;
-    from = from === 'rosa' ? common_1.ColorBackground : from;
-    to = to === 'rosa' ? common_1.ColorBackground : to;
-    from = from === 'white' ? common_1.ColorPink : from;
-    to = to === 'white' ? common_1.ColorPink : to;
+    from = from === 'rosa' ? ColorBackground : from;
+    to = to === 'rosa' ? ColorBackground : to;
+    from = from === 'white' ? ColorPink : from;
+    to = to === 'white' ? ColorPink : to;
     // const size = useWindowSize()
     if (straight) {
         return ((0, jsx_runtime_1.jsx)(Container, { children: (0, jsx_runtime_1.jsx)("svg", __assign({ width: "100%", height: "6", viewBox: "0 0 1440 5", fill: "none", preserveAspectRatio: "none" }, { children: (0, jsx_runtime_1.jsx)("line", { x1: "0", y1: "0", x2: "1440", y2: "0", strokeWidth: 5, stroke: "rgba(0,0,0,.05)" }, void 0) }), void 0) }, void 0));
