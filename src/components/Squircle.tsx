@@ -13,6 +13,7 @@ export const Squircle = withSize({ monitorHeight: true })(function ({
   children,
   radius,
   smoothing,
+  as,
   // @ts-ignore
   size,
   ...rest
@@ -35,6 +36,7 @@ export const Squircle = withSize({ monitorHeight: true })(function ({
         clipPath: radius ? `path('${path}')` : '',
         ...rest.sx
       }}
+      as={as}
     >
       {children}
     </Box>
